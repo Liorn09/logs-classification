@@ -25,7 +25,9 @@ log-classifier/
 │   └── evaluation/          # Metrics and reports
 ├── tests/
 │   └── test_core.py         # Unit tests
+├── videolink.md
 └── requirements.txt
+
 ```
 
 ## Quick Start
