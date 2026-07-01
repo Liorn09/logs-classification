@@ -1,0 +1,25 @@
+[
+  {
+    "log_entry": "ERROR [db-pool] Connection timed out after 30000ms. All 20 pool slots exhausted.",
+    "predicted_category": "RC-02",
+    "confidence": 0.3277,
+    "all_probabilities": {
+      "RC-01": 0.0905,
+      "RC-02": 0.3277,
+      "RC-03": 0.0932,
+      "RC-04": 0.0832,
+      "RC-05": 0.098,
+      "RC-06": 0.0904,
+      "RC-07": 0.1007,
+      "RC-08": 0.1163
+    },
+    "summary": {
+      "category": "RC-02",
+      "severity": "high",
+      "component": "db-pool",
+      "description": "ERROR [db-pool] Connection timed out after 30000ms. All 20 pool slots exhausted.",
+      "confidence": "32.8%",
+      "recommended_action": "Check DB health, increase connection pool size, investigate network latency."
+    }
+  }
+]

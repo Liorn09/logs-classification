@@ -1,0 +1,53 @@
+# ============================================================
+# Log Classifier Pipeline Configuration
+# ============================================================
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  test_size: 0.2
+  random_state: 42
+
+model:
+  # Options: "tfidf_lr" (TF-IDF + Logistic Regression), "tfidf_rf" (TF-IDF + Random Forest),
+  #          "distilbert" (fine-tuned DistilBERT)
+  type: "tfidf_lr"
+  save_dir: "outputs/models"
+
+  tfidf:
+    max_features: 5000
+    ngram_range: [1, 2]
+    sublinear_tf: true
+
+  logistic_regression:
+    max_iter: 1000
+    C: 1.0
+    class_weight: "balanced"
+
+  random_forest:
+    n_estimators: 200
+    max_depth: null
+    class_weight: "balanced"
+
+  distilbert:
+    model_name: "distilbert-base-uncased"
+    max_length: 128
+    epochs: 3
+    batch_size: 16
+    learning_rate: 2.0e-5
+
+summarizer:
+  # Options: "template" (rule-based), "llm" (API-based generation)
+  type: "template"
+  llm:
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+    max_tokens: 256
+
+evaluation:
+  output_dir: "outputs/evaluation"
+  metrics: ["accuracy", "precision", "recall", "f1"]
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

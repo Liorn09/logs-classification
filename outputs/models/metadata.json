@@ -1,0 +1,35 @@
+{
+  "label_codes": [
+    "RC-01",
+    "RC-02",
+    "RC-03",
+    "RC-04",
+    "RC-05",
+    "RC-06",
+    "RC-07",
+    "RC-08"
+  ],
+  "label_names": [
+    "RC-01 (Authentication Failure)",
+    "RC-02 (Database Connection Timeout)",
+    "RC-03 (Third-Party API Failure)",
+    "RC-04 (Rate Limit Exceeded)",
+    "RC-05 (Data Validation Error)",
+    "RC-06 (Insufficient Permissions)",
+    "RC-07 (Resource Exhaustion)",
+    "RC-08 (Network / Connectivity Issue)"
+  ],
+  "label_map": {
+    "RC-01": "Authentication Failure",
+    "RC-02": "Database Connection Timeout",
+    "RC-03": "Third-Party API Failure",
+    "RC-04": "Rate Limit Exceeded",
+    "RC-05": "Data Validation Error",
+    "RC-06": "Insufficient Permissions",
+    "RC-07": "Resource Exhaustion",
+    "RC-08": "Network / Connectivity Issue"
+  },
+  "model_type": "tfidf_lr",
+  "train_size": 96,
+  "test_size": 24
+}
